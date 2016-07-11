@@ -1,0 +1,30 @@
+/* CSS used here will be applied after bootstrap.css */
+body { 
+ background: url('1.jpg') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ width:100%;
+ height:100%;
+ top:0;
+ right:0;
+ left:0;
+ bottom:0;
+}
+#main{
+ margin-left:2%;
+ width:100%;
+}
+.row
+{
+ margin-left:300px;
+}
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+
+}
+.form-group.last {
+ margin-bottom:0px;
+}

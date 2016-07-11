@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<title>login</title>
+
+<!-- Importing necessary styles -->
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<link rel="stylesheet" href="css/login_style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script>
+	
+</head>
+<body style="position:fixed">
+<?php
+
+//If there already an active user the following code will open his profile page directly
+
+error_reporting(E_ALL ^ E_NOTICE); //to avoid error like "undefined index us";
+session_start();
+if($_SESSION["us"] != null)
+{
+	include("profile.php");
+	exit;
+}
+?>
+<div id="first">
+<div id="header-wrapper">
+<div id="header">
+				<div class="logo">					
+					<h1>Education Institution</h1>					
+				</div>
+</div>
+</div>
+<div id="main">
+<table class="tbl">
+<tr>
+	<td>
+		<div class="school">
+		<img src="school.jpg" width="450px" height="600px">
+		</div>
+	</td>
+<td>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class="">Login</strong>
+
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal"  action="test.php" method="post" role="form">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Username</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="inputEmail3" id="inputEmail3" placeholder="Username" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" name="inputPassword3" id="inputPassword3" placeholder="Password" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <div class="checkbox">
+                                    <label class="">
+                                        <input type="checkbox" class="">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-success btn-sm">Sign in</button>
+                                <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                <!--
+							If Registering is required use below code ...
+				</div>
+                <div class="panel-footer">Not Registered? <a href="#" class="">Register here</a>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>
