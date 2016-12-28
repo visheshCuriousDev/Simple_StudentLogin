@@ -25,4 +25,4 @@ Follow the following steps and checkout.
 ThankYou !!! Report if you have any errors
 
 
-<img src="Simple_StudentLogin/Screenshot from 2016-12-28 18-37-37.png">
+<img src="preview.png">
